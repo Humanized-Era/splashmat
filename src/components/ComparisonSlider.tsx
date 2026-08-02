@@ -36,7 +36,7 @@ export default function ComparisonSlider() {
 
           {/* Linkerlaag: ZONDER SplashMat (accent), geclipt */}
           <div
-            className="absolute inset-0 flex flex-col justify-between bg-gradient-to-br from-orange-100/60 to-red-50 p-6 dark:from-orange-950/40 dark:to-red-950/20 sm:p-10"
+            className="absolute inset-0 flex flex-col justify-between bg-gradient-to-br from-orange-100 to-red-50 p-6 dark:from-orange-950 dark:to-red-950 sm:p-10"
             style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
           >
             <span className="w-fit rounded-full bg-brand-accent px-3 py-1 text-xs font-bold text-white">
