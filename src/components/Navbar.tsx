@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 px-4 pt-4">
+    <header className="sticky top-0 z-50 bg-background/95 px-4 pb-2 pt-4 backdrop-blur-md">
       <nav
         aria-label="Hoofdnavigatie"
         className="glass mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 shadow-sm"
