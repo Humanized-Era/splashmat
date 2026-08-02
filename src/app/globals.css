@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7fbfa;
+  --foreground: #0f2b28;
+  --surface: #ffffff;
+  --surface-muted: #eef6f4;
+  --border-soft: rgba(15, 43, 40, 0.08);
+
+  --brand-mint: #2fbf9f;
+  --brand-mint-dark: #1f9a80;
+  --brand-blue: #4d8fe0;
+  --brand-blue-light: #eaf3ff;
+  --brand-accent: #ff8a5b;
+
+  --text-muted: #4a6460;
+}
+
+.dark {
+  --background: #0b1817;
+  --foreground: #eef6f4;
+  --surface: #102523;
+  --surface-muted: #143330;
+  --border-soft: rgba(238, 246, 244, 0.1);
+
+  --brand-blue-light: #12293a;
+  --text-muted: #a9c4c0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border-soft: var(--border-soft);
+  --color-brand-mint: var(--brand-mint);
+  --color-brand-mint-dark: var(--brand-mint-dark);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-light: var(--brand-blue-light);
+  --color-brand-accent: var(--brand-accent);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border-soft);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+.glass {
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--border-soft);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--brand-mint);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-mint);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
