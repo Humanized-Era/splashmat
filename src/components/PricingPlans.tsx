@@ -68,7 +68,7 @@ export default function PricingPlans() {
               </ul>
 
               <a
-                href="#top"
+                href="#aanmelden"
                 className={`mt-8 rounded-full px-5 py-3 text-center text-sm font-semibold transition-transform hover:scale-105 ${
                   plan.highlight
                     ? "bg-brand-mint text-white"

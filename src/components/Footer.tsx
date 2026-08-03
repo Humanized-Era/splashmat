@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div id="aanmelden">
             <h3 className="font-semibold">Blijf op de hoogte</h3>
             <p className="mt-2 text-sm text-text-muted">
               Meld je aan voor tips over een fris toilet en exclusieve aanbiedingen.
